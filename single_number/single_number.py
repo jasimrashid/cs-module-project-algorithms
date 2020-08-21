@@ -5,8 +5,20 @@ Returns: an integer
 def single_number(arr):
     # Your code here
 
-    pass
+    for i in range(len(arr)):
+        # print(arr[i])
+        # print(arr[i+1:])
+        count = 0
+        for j in range(len(arr)):
+            if i != j:
+                if arr[i] == arr[j]:
+                    count += 1
+        if count == 0:
+            return arr[i]
 
+        
+        
+#TODO: O(1) space complexity
 
 if __name__ == '__main__':
     # Use the main function to test your implementation
